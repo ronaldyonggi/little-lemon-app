@@ -7,7 +7,7 @@ import FlatListMenu from './components/FlatListMenu';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={styles.alternativeContainer}>
       <Header />
       {/* <Welcome /> */}
       <FlatListMenu />
@@ -21,5 +21,10 @@ const styles = StyleSheet.create({
     flex: 1,
     // justifyContent: 'space-between',
     backgroundColor: '#495e57',
+  },
+  alternativeContainer: {
+    flex: 1,
+    // justifyContent: 'space-between',
+    backgroundColor: '#333333',
   },
 });

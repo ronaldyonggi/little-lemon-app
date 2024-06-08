@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Welcome() {
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.alternativeContainer}>
         <Text style={styles.heading}>Welcome to Little Lemon</Text>
         <Text style={styles.subheading}>
           Little Lemon is a charming neighborhood bistro that serves simple food
@@ -18,6 +18,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#495e57',
+  },
+  alternativeContainer: {
+    flex: 1,
+    backgroundColor: '#333333',
   },
   heading: {
     color: 'white',

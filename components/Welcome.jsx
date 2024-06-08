@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 export default function Welcome() {
   const [name, onChangeName] = useState('');
   return (
-    <ScrollView style={styles.alternativeContainer}>
+    <ScrollView style={styles.alternativeContainer} keyboardDismissMode='on-drag'>
       <Text style={styles.heading}>Welcome to Little Lemon</Text>
       <Text style={styles.subheading}>
         Little Lemon is a charming neighborhood bistro that serves simple food

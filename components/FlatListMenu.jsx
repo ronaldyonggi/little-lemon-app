@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 import { flatListMenu } from '../menu/flatListMenu';
+import Footer from './Footer';
 
 const Item = ({ name, price }) => {
   return (
@@ -23,6 +24,7 @@ export default function FlatListMenu() {
         renderItem={({ item }) => <Item name={item.name} price={item.price} />}
         ItemSeparatorComponent={Separator}
         ListHeaderComponent={Header}
+        ListFooterComponent={<Footer />}
       />
     </View>
   );

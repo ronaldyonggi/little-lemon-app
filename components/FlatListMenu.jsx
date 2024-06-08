@@ -1,10 +1,11 @@
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 import { flatListMenu } from '../menu/flatListMenu';
 
-const Item = ({ name }) => {
+const Item = ({ name, price }) => {
   return (
     <View style={styles.innerContainer}>
       <Text style={styles.itemText}>{name}</Text>
+      <Text style={styles.itemText}>{price}</Text>
     </View>
   );
 };
@@ -16,7 +17,7 @@ export default function FlatListMenu() {
       <FlatList 
         data={flatListMenu}
         keyExtractor={item => item.id}
-        renderItem={({ item }) => <Item name={item.name}/>}
+        renderItem={({ item }) => <Item name={item.name} price={item.price}/>}
       />
 
     </View>
@@ -30,7 +31,10 @@ const styles = StyleSheet.create({
   innerContainer: {
     paddingHorizontal: 40,
     paddingVertical: 20,
-    backgroundColor: 'black',
+    backgroundColor: '#333333',
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
   headerText: {
     color: 'white',
@@ -40,6 +44,6 @@ const styles = StyleSheet.create({
   },
   itemText: {
     color: '#F4CE14',
-    fontSize: 36,
+    fontSize: 25,
   },
 });

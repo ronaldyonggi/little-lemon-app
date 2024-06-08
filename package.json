@@ -1,12 +1,13 @@
 {
-  "name": "coursera-tutorial",
+  "name": "little-lemon-app",
   "version": "1.0.0",
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "react-devtools": "react-devtools"
   },
   "dependencies": {
     "expo": "~51.0.10",
@@ -15,7 +16,7 @@
     "react-native": "0.74.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.24.7"
   },
   "private": true
 }

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "coursera-tutorial",
-    "slug": "coursera-tutorial",
+    "name": "little-lemon-app",
+    "slug": "little-lemon-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

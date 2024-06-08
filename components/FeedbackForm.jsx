@@ -5,6 +5,7 @@ import {
   TextInput,
   StyleSheet,
   KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 import React, { useState } from 'react';
 
@@ -14,7 +15,7 @@ export default function FeedbackForm() {
   const [message, onChangeMessage] = useState('');
 
   return (
-    <KeyboardAvoidingView style={styles.container}>
+    <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <ScrollView keyboardDismissMode='on-drag'>
         <Text style={styles.headingSection}>
           How was your visit to Little Lemon?

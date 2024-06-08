@@ -10,6 +10,8 @@ const Item = ({ name, price }) => {
   );
 };
 
+const Separator = () => <View style={styles.separator} />
+
 export default function FlatListMenu() {
   return (
     <View style={styles.container}>
@@ -18,6 +20,7 @@ export default function FlatListMenu() {
         data={flatListMenu}
         keyExtractor={item => item.id}
         renderItem={({ item }) => <Item name={item.name} price={item.price}/>}
+        ItemSeparatorComponent={Separator}
       />
 
     </View>
@@ -46,4 +49,8 @@ const styles = StyleSheet.create({
     color: '#F4CE14',
     fontSize: 25,
   },
+  separator: {
+    borderBottomWidth: 1,
+    borderColor: '#edefee'
+  }
 });

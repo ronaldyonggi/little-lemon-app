@@ -10,19 +10,20 @@ const Item = ({ name, price }) => {
   );
 };
 
-const Separator = () => <View style={styles.separator} />
+const Header = () => <Text style={styles.headerText}>View Menu</Text>;
+
+const Separator = () => <View style={styles.separator} />;
 
 export default function FlatListMenu() {
   return (
     <View style={styles.container}>
-      <Text style={styles.headerText}>View Menu</Text>
-      <FlatList 
+      <FlatList
         data={flatListMenu}
-        keyExtractor={item => item.id}
-        renderItem={({ item }) => <Item name={item.name} price={item.price}/>}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => <Item name={item.name} price={item.price} />}
         ItemSeparatorComponent={Separator}
+        ListHeaderComponent={Header}
       />
-
     </View>
   );
 }
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#333333',
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   headerText: {
     color: 'white',
@@ -51,6 +52,6 @@ const styles = StyleSheet.create({
   },
   separator: {
     borderBottomWidth: 1,
-    borderColor: '#edefee'
-  }
+    borderColor: '#edefee',
+  },
 });

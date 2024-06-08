@@ -4,14 +4,18 @@ import Welcome from './components/Welcome';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FlatListMenu from './components/FlatListMenu';
+import SectionListMenu from './components/SectionListMenu';
+import SectionListMenuWithPrice from './components/SectionListMenuWithPrice';
 
 export default function App() {
   return (
     <View style={styles.alternativeContainer}>
       <Header />
       {/* <Welcome /> */}
-      <FlatListMenu />
-      <Footer />
+      {/* <FlatListMenu /> */}
+      {/* <Footer /> */}
+      {/* <SectionListMenu /> */}
+      <SectionListMenuWithPrice />
     </View>
   );
 }

@@ -13,6 +13,7 @@ export default function FeedbackForm() {
   const [firstName, onChangeFirstName] = useState('');
   const [lastName, onChangeLastName] = useState('');
   const [message, onChangeMessage] = useState('');
+  const [phoneNumber, onChangePhoneNumber] = useState('');
 
   return (
     <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
@@ -38,12 +39,19 @@ export default function FeedbackForm() {
           onChangeText={onChangeLastName}
         />
         <TextInput
-          style={styles.input}
+          style={styles.messageInput}
           value={message}
           placeholder='Message'
           onChangeText={onChangeMessage}
-          multiline
-          numberOfLines={4}
+          multiline={true}
+          maxLength={250}
+        />
+        <TextInput
+          style={styles.input}
+          value={phoneNumber}
+          placeholder='Phone number'
+          onChangeText={onChangePhoneNumber}
+          keyboardType={'phone-pad'}
         />
       </ScrollView>
     </KeyboardAvoidingView>

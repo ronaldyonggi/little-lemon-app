@@ -1,3 +1,5 @@
+import { StyleSheet } from 'react-native';
+
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -7,13 +9,11 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#333333',
   },
-  heading: {
+  headerText: {
     color: 'white',
-    fontSize: 40,
-    textAlign: 'center',
-    padding: 40,
+    fontSize: 35,
   },
-  subheading: {
+  description: {
     color: 'white',
     fontSize: 25,
     textAlign: 'center',
@@ -25,5 +25,20 @@ export const styles = StyleSheet.create({
     fontSize: 30,
     marginHorizontal: 15,
     padding: 15,
+  },
+  logo: {
+    height: 100,
+    width: 100,
+  },
+  heading: {
+    flex: 1,
+    flexDirection: 'row',
+    paddingHorizontal: 30,
+    paddingVertical: 15 
+  },
+  headerTextView: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 });

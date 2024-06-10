@@ -1,19 +1,30 @@
 import {
   View,
   Text,
-  StyleSheet,
   ScrollView,
   TextInput,
   Image,
+  useColorScheme,
 } from 'react-native';
 import React, { useState } from 'react';
 import { styles } from './styles';
 
 export default function Welcome() {
+  const colorScheme = useColorScheme()
+  const isLightTheme = colorScheme === "light"
   const [name, onChangeName] = useState('');
+
+  const backgroundColorTheme = {
+    backgroundColor : isLightTheme ? "white" : "#495e57"
+  }
+
+  const textColorTheme = {
+    color: isLightTheme ? "black" : "white"
+  }
+
   return (
     <ScrollView
-      style={styles.alternativeContainer}
+      style={[styles.container, backgroundColorTheme]}
       keyboardDismissMode='on-drag'
     >
       <View style={styles.heading}>
@@ -24,10 +35,10 @@ export default function Welcome() {
           }}
         />
         <View style={styles.headerTextView}>
-          <Text style={styles.headerText}>Little Lemon</Text>
+          <Text style={[styles.headerText, textColorTheme]}>Little Lemon</Text>
         </View>
       </View>
-      <Text style={styles.description}>
+      <Text style={[styles.description, textColorTheme]}>
         Little Lemon is a charming neighborhood bistro that serves simple food
         and classic cocktails in a lively but casual environment. We would love
         to hear more about your experience with us!

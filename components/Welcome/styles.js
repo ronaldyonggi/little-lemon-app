@@ -3,18 +3,14 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#495e57',
-  },
-  alternativeContainer: {
-    flex: 1,
-    backgroundColor: '#333333',
+    // backgroundColor: '#495e57',
   },
   headerText: {
-    color: 'white',
+    // color: 'white',
     fontSize: 35,
   },
   description: {
-    color: 'white',
+    // color: 'white',
     fontSize: 25,
     textAlign: 'center',
     padding: 20,

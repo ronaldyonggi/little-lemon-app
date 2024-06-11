@@ -6,17 +6,24 @@ import Footer from './components/Footer';
 import FlatListMenu from './components/FlatListMenu';
 import SectionListMenu from './components/SectionListMenu';
 import SectionListMenuWithPrice from './components/SectionListMenuWithPrice';
+import FeedbackForm from './components/FeedbackForm';
+import LoginScreen from './components/LoginScreen';
+import WelcomeWithImage from './components/WelcomeWithImage';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   return (
-    <View style={styles.alternativeContainer}>
+    <NavigationContainer style={styles.alternativeContainer}>
       <Header />
-      {/* <Welcome /> */}
+      <Welcome />
       {/* <FlatListMenu /> */}
       {/* <Footer /> */}
       {/* <SectionListMenu /> */}
-      <SectionListMenuWithPrice />
-    </View>
+      {/* <SectionListMenuWithPrice /> */}
+      {/* <FeedbackForm /> */}
+      {/* <LoginScreen /> */}
+      {/* <WelcomeWithImage /> */}
+    </NavigationContainer>
   );
 }
 

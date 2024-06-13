@@ -3,6 +3,11 @@ import React from 'react';
 import { styles } from './styles';
 
 export default function LoginInputForm(props) {
+  const onLoginPress = () => {
+    props.setLoggedIn(true);
+    props.navigation.navigate('Welcome');
+  };
+
   return (
     <View>
       <Text style={styles.regularText}>Login to continue</Text>
@@ -21,7 +26,7 @@ export default function LoginInputForm(props) {
         style={styles.inputField}
       />
 
-      <Pressable style={styles.button} onPress={ () => props.setLoggedIn(true)}>
+      <Pressable style={styles.button} onPress={onLoginPress}>
         <Text style={styles.buttonText}>Log in</Text>
       </Pressable>
     </View>

@@ -15,7 +15,7 @@ export default function WelcomeScreen() {
   const [name, onChangeName] = useState('');
 
   const backgroundColorTheme = {
-    backgroundColor : isLightTheme ? "white" : "#495e57"
+    backgroundColor : isLightTheme ? "white" : "#333333"
   }
 
   const textColorTheme = {

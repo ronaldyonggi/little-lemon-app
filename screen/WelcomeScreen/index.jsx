@@ -9,7 +9,7 @@ import {
 import React, { useState } from 'react';
 import { styles } from './styles';
 
-export default function Welcome() {
+export default function WelcomeScreen() {
   const colorScheme = useColorScheme()
   const isLightTheme = colorScheme === "light"
   const [name, onChangeName] = useState('');

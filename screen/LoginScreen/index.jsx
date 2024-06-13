@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import LoginInputForm from './LoginInputForm';
 import { styles } from './styles';
 
-export default function LoginScreen({ isLightTheme }) {
+export default function LoginScreen({ isLightTheme, navigation }) {
   const [email, onChangeEmail] = useState('');
   const [password, onChangePassword] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
@@ -26,6 +26,7 @@ export default function LoginScreen({ isLightTheme }) {
             password={password}
             onChangePassword={onChangePassword}
             setLoggedIn={setLoggedIn}
+            navigation={navigation}
           />
         ) : (
           <Text style={styles.regularText}>You are logged in!</Text>
